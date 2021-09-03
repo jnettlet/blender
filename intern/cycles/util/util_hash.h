@@ -21,6 +21,10 @@
 
 CCL_NAMESPACE_BEGIN
 
+#ifdef cl_clang_storage_class_specifiers
+    #pragma OPENCL EXTENSION cl_clang_storage_class_specifiers : enable
+#endif
+
 /* ***** Jenkins Lookup3 Hash Functions ***** */
 
 /* Source: http://burtleburtle.net/bob/c/lookup3.c */

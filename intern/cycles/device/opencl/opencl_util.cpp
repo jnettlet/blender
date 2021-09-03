@@ -823,6 +823,11 @@ bool OpenCLInfo::device_supported(const string &platform_name, const cl_device_i
   if (platform_name == "Apple" && device_type == CL_DEVICE_TYPE_GPU) {
     return false;
   }
+  if (platform_name == "Clover" && device_type == CL_DEVICE_TYPE_GPU &&
+      device_name.find("Radeon") != string::npos) {
+    return true;
+  }
+
   return false;
 }
 
